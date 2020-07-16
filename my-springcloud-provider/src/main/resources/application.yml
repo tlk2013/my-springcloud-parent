@@ -1,2 +1,20 @@
 server:
   port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8083/eureka/
+spring:
+  application:
+    name:  my-springcloud-provider
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream    #暴露端点
+
+
+
+
+

@@ -8,7 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="my-springcloud-common" />
         <module name="my-springcloud-consumer" />
+        <module name="my-springcloud-eureka" />
+        <module name="my-springcloud-hystrix" />
         <module name="my-springcloud-provider" />
+        <module name="my-springcloud-zuul" />
       </profile>
     </annotationProcessing>
   </component>

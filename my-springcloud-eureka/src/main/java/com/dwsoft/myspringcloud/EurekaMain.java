@@ -2,16 +2,16 @@ package com.dwsoft.myspringcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author tlk
- * @date 2020/7/13-14:50
+ * @date 2020/7/13-16:09
  */
-@EnableFeignClients  //启用 Feign 客户端功能
+@EnableEurekaServer  //启用eureka服务器功能
 @SpringBootApplication
-public class ConsumerMain {
+public class EurekaMain {
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerMain.class,args);
+        SpringApplication.run(EurekaMain.class,args);
     }
 }

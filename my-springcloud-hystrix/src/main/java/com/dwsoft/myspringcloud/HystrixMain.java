@@ -2,16 +2,16 @@ package com.dwsoft.myspringcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 /**
  * @author tlk
- * @date 2020/7/13-14:50
+ * @date 2020/7/15-11:45
  */
-@EnableFeignClients  //启用 Feign 客户端功能
+@EnableHystrixDashboard//启用仪表盘功能
 @SpringBootApplication
-public class ConsumerMain {
+public class HystrixMain {
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerMain.class,args);
+        SpringApplication.run(HystrixMain.class,args);
     }
 }

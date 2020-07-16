@@ -12,6 +12,9 @@
         <module>my-springcloud-common</module>
         <module>my-springcloud-provider</module>
         <module>my-springcloud-consumer</module>
+        <module>my-springcloud-eureka</module>
+        <module>my-springcloud-hystrix</module>
+        <module>my-springcloud-zuul</module>
     </modules>
     <dependencyManagement>
         <dependencies>

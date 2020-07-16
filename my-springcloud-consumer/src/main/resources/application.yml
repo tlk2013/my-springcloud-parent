@@ -1,2 +1,12 @@
 server:
   port: 8082
+spring:
+  application:
+    name: my-springcloud-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8083/eureka/
+feign:
+  hystrix:
+    enabled: true  #开启feign的hystrix支持,默认是false
