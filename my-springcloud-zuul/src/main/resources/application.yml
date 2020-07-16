@@ -1,0 +1,17 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: my-springcloud-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8083/eureka/
+zuul:
+  prefix: /hello # 给访问路径添加统一前缀
+  ignored-services:
+    - my-springcloud-consumer   # 忽略指定微服务名称，让用户不能通过微服务名称访问 ; 若ignored-services: '*'  则忽略所有微服务名称
+  routes:
+    zuul-test:  # 自定义路由规则的名称，在底层的数据结构中是 Map 的键
+      serviceId: my-springcloud-consumer # 目标微服务名称，ZuulRoute 类型的一个属性
+      path: /zuul-user/**  # 用来代替目标微服务名称的路径， ZuulRoute 类型的一个属性 ,/**表示匹配多层路径，如果没有加/**则不能匹配后续的多层路径了
